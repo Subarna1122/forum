@@ -1,0 +1,9 @@
+{
+    "name": "dell/imp",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
