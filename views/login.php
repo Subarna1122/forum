@@ -1,13 +1,9 @@
+<?php 
+/** @var $model \app\model\RegisterModel;*/
+?>
 <h1>Login</h1>
-<form action ="" method="post">
-  <div class="form-group">
-   <label >Email</label><br>
-    <input type="text" name="firstname" class="form-control">
-  </div>
-  <div class="form-group">
-   <label >Password</label><br>
-    <input type="password" name="password" class="form-control">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+<?php $form = \app\core\form\Form::begin("", "post")?>
+      <?php echo $form->field($model, 'email') ;?>
+      <?php echo $form->field($model, 'password')->passwordField() ;?>
+    <button type="submit" class="btn btn-primary">Register</button>
+<?php \app\core\form\Form::end();?>
